@@ -1,1 +1,2682 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      html {
+        scroll-padding-top: env(safe-area-inset-top, 0px);
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font:
+          14px -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: #fff;
+        color: #000;
+      }
+      img {
+        max-width: 100%;
+      }
+      [hidden]:not([hidden="until-found" i]) {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <title>Formula C1 Phrases</title>
+    <meta name="claude:viewport-fit-sides" content="cover" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lexend:wght@500;600;700&display=swap"
+    />
+    <style>
+      /* Layout: one centred column (max 640px). Gradient header, tab bar, then the active tab. Teal-green, sky-blue, steel-blue, mint. */
+      :root {
+        --bg: #eaf6f3;
+        --surface: #ffffff;
+        --ink: #12353c;
+        --ink2: #4a6a72;
+        --line: #cbe4df;
+        --teal: #0a7c75;
+        --sky: #6ec1ea;
+        --steel: #2f6f9f;
+        --mint: #a8e6cf;
+        --mintbg: #e3f6ee;
+        --ok: #17804b;
+        --okbg: #dcf4e6;
+        --bad: #c43c30;
+        --badbg: #fbe4e0;
+        --warn: #9a6a00;
+        --grad: linear-gradient(135deg, #0a7c75 0%, #1f9c8a 48%, #3f8fc4 100%);
+        --shadow: 0 6px 22px rgba(18, 53, 60, 0.1);
+        --f-head: "Lexend", "Inter", system-ui, sans-serif;
+        --f-body: "Inter", system-ui, sans-serif;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #0b1c21;
+          --surface: #13303a;
+          --ink: #e4f4f1;
+          --ink2: #9fc0c4;
+          --line: #254852;
+          --teal: #3fc9b5;
+          --sky: #6ec1ea;
+          --steel: #2b6f99;
+          --mint: #2e6b5b;
+          --mintbg: #16372f;
+          --ok: #5ed39a;
+          --okbg: #173d33;
+          --bad: #ff8a7d;
+          --badbg: #47241f;
+          --warn: #e6b84d;
+          --grad: linear-gradient(
+            135deg,
+            #075e5a 0%,
+            #136f68 48%,
+            #235f8c 100%
+          );
+          --shadow: 0 6px 22px rgba(0, 0, 0, 0.35);
+          color-scheme: dark;
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #0b1c21;
+        --surface: #13303a;
+        --ink: #e4f4f1;
+        --ink2: #9fc0c4;
+        --line: #254852;
+        --teal: #3fc9b5;
+        --sky: #6ec1ea;
+        --steel: #2b6f99;
+        --mint: #2e6b5b;
+        --mintbg: #16372f;
+        --ok: #5ed39a;
+        --okbg: #173d33;
+        --bad: #ff8a7d;
+        --badbg: #47241f;
+        --warn: #e6b84d;
+        --grad: linear-gradient(135deg, #075e5a 0%, #136f68 48%, #235f8c 100%);
+        --shadow: 0 6px 22px rgba(0, 0, 0, 0.35);
+        color-scheme: dark;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font: 16px/1.5 var(--f-body);
+        padding-block: 0 48px;
+        padding-left: max(16px, env(safe-area-inset-left, 0px));
+        padding-right: max(16px, env(safe-area-inset-right, 0px));
+      }
+      .wrap {
+        max-width: 640px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        min-width: 0;
+      }
+      header.top {
+        background: var(--grad);
+        color: #fff;
+        border-radius: 0 0 22px 22px;
+        padding: 22px 20px 18px;
+        margin: 0 -16px;
+        padding-left: max(20px, env(safe-area-inset-left, 0px));
+        padding-right: max(20px, env(safe-area-inset-right, 0px));
+      }
+      header.top h1 {
+        font: 700 clamp(22px, 6vw, 30px)/1.15 var(--f-head);
+        margin: 0 0 4px;
+        text-wrap: balance;
+      }
+      header.top p {
+        margin: 0;
+        opacity: 0.92;
+        font-size: 14px;
+      }
+      .toprow {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .lang {
+        display: flex;
+        gap: 2px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 999px;
+        padding: 3px;
+        flex: none;
+      }
+      .lang button {
+        border: 0;
+        background: none;
+        color: #fff;
+        font: 600 13px var(--f-body);
+        padding: 6px 12px;
+        border-radius: 999px;
+        cursor: pointer;
+      }
+      .lang button.on {
+        background: var(--surface);
+        color: var(--ink);
+      }
+      .tabs {
+        display: flex;
+        gap: 6px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 5px;
+      }
+      .tabs button {
+        flex: 1;
+        border: 0;
+        background: none;
+        color: var(--ink2);
+        font: 600 14px var(--f-body);
+        padding: 10px 6px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .tabs button[aria-selected="true"] {
+        background: var(--steel);
+        color: #fff;
+      }
+      button {
+        font-family: inherit;
+      }
+      button:focus-visible,
+      a:focus-visible,
+      input:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible,
+      .card:focus-visible {
+        outline: 3px solid var(--sky);
+        outline-offset: 2px;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chip {
+        border: 1.5px solid var(--line);
+        background: var(--surface);
+        color: var(--ink);
+        border-radius: 999px;
+        padding: 7px 14px;
+        font: 500 14px var(--f-body);
+        cursor: pointer;
+      }
+      .chip small {
+        color: var(--ink2);
+        margin-left: 4px;
+      }
+      .chip.on {
+        background: var(--teal);
+        border-color: var(--teal);
+        color: #fff;
+      }
+      .chip.on small {
+        color: #fff;
+        opacity: 0.85;
+      }
+      .seg {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 4px;
+      }
+      .seg button {
+        border: 0;
+        background: none;
+        padding: 8px 4px;
+        border-radius: 9px;
+        font: 500 13px var(--f-body);
+        color: var(--ink2);
+        cursor: pointer;
+      }
+      .seg button.on {
+        background: var(--mintbg);
+        color: var(--teal);
+        font-weight: 600;
+        box-shadow: inset 0 0 0 1.5px var(--teal);
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+      }
+      .row.sp {
+        justify-content: space-between;
+      }
+      .stats {
+        font-size: 13px;
+        color: var(--ink2);
+      }
+      .bar {
+        height: 8px;
+        background: var(--line);
+        border-radius: 99px;
+        overflow: hidden;
+      }
+      .bar i {
+        display: block;
+        height: 100%;
+        background: linear-gradient(90deg, var(--teal), var(--sky));
+        border-radius: 99px;
+        transition: width 0.25s;
+      }
+      .cnt {
+        font: 600 13px var(--f-body);
+        color: var(--ink2);
+        font-variant-numeric: tabular-nums;
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+        padding: 22px 18px;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        text-align: center;
+        cursor: pointer;
+        min-width: 0;
+      }
+      .card.back {
+        align-items: stretch;
+        text-align: left;
+        justify-content: flex-start;
+        cursor: default;
+      }
+      .lab {
+        align-self: center;
+        font: 600 11px var(--f-body);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--teal);
+        background: var(--mintbg);
+        padding: 4px 10px;
+        border-radius: 99px;
+      }
+      .big {
+        font: 600 clamp(28px, 8.5vw, 42px)/1.15 var(--f-head);
+        overflow-wrap: anywhere;
+        text-wrap: balance;
+        margin: 0;
+      }
+      .big.sm {
+        font-size: clamp(20px, 5.6vw, 26px);
+      }
+      .tap {
+        font-size: 13px;
+        color: var(--ink2);
+      }
+      .bhead {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .b-en {
+        font: 600 13px var(--f-body);
+        color: var(--ink2);
+      }
+      .b-uk {
+        font: 600 clamp(20px, 5.6vw, 26px)/1.25 var(--f-head);
+        color: var(--steel);
+        margin: 0;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) .b-uk {
+          color: var(--sky);
+        }
+      }
+      :root[data-theme="dark"] .b-uk {
+        color: var(--sky);
+      }
+      .ex {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.6;
+        background: var(--mintbg);
+        border-radius: 14px;
+        padding: 12px 14px;
+      }
+      .gap {
+        border: 0;
+        border-bottom: 3px solid var(--teal);
+        background: none;
+        color: var(--teal);
+        font: 700 18px var(--f-body);
+        min-width: 64px;
+        cursor: pointer;
+        padding: 0 4px;
+      }
+      .cols {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .cols span {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 4px 10px;
+        font-size: 14px;
+      }
+      .btn {
+        border: 0;
+        border-radius: 12px;
+        padding: 11px 16px;
+        font: 600 15px var(--f-body);
+        cursor: pointer;
+        background: var(--steel);
+        color: #fff;
+        text-decoration: none;
+        display: inline-flex;
+        gap: 6px;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn.ghost {
+        background: var(--surface);
+        color: var(--steel);
+        border: 1.5px solid var(--line);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) .btn.ghost {
+          color: var(--sky);
+        }
+      }
+      :root[data-theme="dark"] .btn.ghost {
+        color: var(--sky);
+      }
+      .btn.good {
+        background: var(--ok);
+        color: #fff;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) .btn.good {
+          color: #06281a;
+        }
+      }
+      :root[data-theme="dark"] .btn.good {
+        color: #06281a;
+      }
+      .btn.warn {
+        background: var(--surface);
+        color: var(--bad);
+        border: 1.5px solid var(--bad);
+      }
+      .btn.wide {
+        flex: 1;
+        min-width: 130px;
+      }
+      .btn[disabled] {
+        opacity: 0.5;
+        cursor: default;
+      }
+      .btn svg {
+        width: 18px;
+        height: 18px;
+        flex: none;
+      }
+      .sw {
+        display: flex;
+        gap: 8px;
+      }
+      .tog {
+        border: 1.5px solid var(--line);
+        background: var(--surface);
+        color: var(--ink2);
+        padding: 7px 14px;
+        border-radius: 999px;
+        font: 500 14px var(--f-body);
+        cursor: pointer;
+      }
+      .tog.on {
+        border-color: var(--teal);
+        color: var(--teal);
+        background: var(--mintbg);
+        font-weight: 600;
+      }
+      .panel {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-width: 0;
+      }
+      .panel h2 {
+        font: 600 18px var(--f-head);
+        margin: 0;
+      }
+      .panel h3 {
+        font: 600 15px var(--f-head);
+        margin: 0;
+      }
+      .panel p {
+        margin: 0;
+      }
+      .muted {
+        color: var(--ink2);
+        font-size: 14px;
+      }
+      .menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .mi {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        text-align: left;
+        border: 1.5px solid var(--line);
+        background: var(--surface);
+        border-radius: 14px;
+        padding: 13px 15px;
+        cursor: pointer;
+        color: var(--ink);
+      }
+      .mi b {
+        font: 600 16px var(--f-head);
+      }
+      .mi span {
+        font-size: 13px;
+        color: var(--ink2);
+      }
+      .mi:hover {
+        border-color: var(--teal);
+      }
+      .qtext {
+        font: 600 clamp(20px, 5.6vw, 26px)/1.3 var(--f-head);
+        margin: 0;
+        overflow-wrap: anywhere;
+      }
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        font: 16px var(--f-body);
+        padding: 11px 12px;
+        border-radius: 12px;
+        border: 1.5px solid var(--line);
+        background: var(--bg);
+        color: var(--ink);
+      }
+      textarea {
+        min-height: 84px;
+        resize: vertical;
+        word-break: break-all;
+      }
+      .fb {
+        border-radius: 12px;
+        padding: 10px 12px;
+        font-weight: 500;
+      }
+      .fb.ok {
+        background: var(--okbg);
+        color: var(--ok);
+      }
+      .fb.no {
+        background: var(--badbg);
+        color: var(--bad);
+      }
+      .opts {
+        display: grid;
+        gap: 8px;
+      }
+      .opt {
+        border: 1.5px solid var(--line);
+        background: var(--surface);
+        color: var(--ink);
+        border-radius: 12px;
+        padding: 12px 14px;
+        text-align: left;
+        font: 500 16px var(--f-body);
+        cursor: pointer;
+      }
+      .opt.on {
+        border-color: var(--steel);
+        background: var(--mintbg);
+      }
+      .opt.good {
+        border-color: var(--ok);
+        background: var(--okbg);
+        color: var(--ok);
+      }
+      .opt.bad {
+        border-color: var(--bad);
+        background: var(--badbg);
+        color: var(--bad);
+      }
+      .opt.miss {
+        border-color: var(--warn);
+        border-style: dashed;
+      }
+      .mgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .mgrid .col {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        min-width: 0;
+      }
+      .mgrid .opt {
+        font-size: 14px;
+        padding: 10px;
+        overflow-wrap: anywhere;
+      }
+      .opt.done {
+        border-color: var(--ok);
+        background: var(--okbg);
+        color: var(--ok);
+        opacity: 0.7;
+      }
+      .groups {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .grp {
+        border: 2px dashed var(--line);
+        border-radius: 14px;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        min-height: 92px;
+        background: var(--surface);
+        cursor: pointer;
+        text-align: left;
+        color: var(--ink);
+        min-width: 0;
+      }
+      .grp.armed {
+        border-color: var(--teal);
+        background: var(--mintbg);
+      }
+      .grp b {
+        font: 600 14px var(--f-head);
+      }
+      .pool {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        min-height: 40px;
+      }
+      .pc {
+        border: 1.5px solid var(--line);
+        background: var(--surface);
+        color: var(--ink);
+        border-radius: 10px;
+        padding: 6px 10px;
+        font: 500 14px var(--f-body);
+        cursor: pointer;
+        text-align: left;
+      }
+      .pc.sel {
+        border-color: var(--teal);
+        background: var(--mintbg);
+        box-shadow: 0 0 0 2px var(--teal);
+      }
+      .pc.good {
+        border-color: var(--ok);
+        background: var(--okbg);
+        color: var(--ok);
+      }
+      .pc.bad {
+        border-color: var(--bad);
+        background: var(--badbg);
+        color: var(--bad);
+      }
+      .pc small {
+        display: block;
+        font-size: 11px;
+        font-weight: 600;
+      }
+      .list {
+        margin: 0;
+        padding-left: 20px;
+      }
+      .list li {
+        margin: 2px 0;
+      }
+      .score {
+        font: 700 40px var(--f-head);
+        color: var(--teal);
+        margin: 0;
+      }
+      .msg {
+        font-size: 14px;
+        min-height: 20px;
+      }
+      .cards-empty {
+        text-align: center;
+        padding: 30px 10px;
+      }
+      .kbd {
+        font-size: 12px;
+        color: var(--ink2);
+        text-align: center;
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .card {
+          animation: pop 0.18s ease-out;
+        }
+        @keyframes pop {
+          from {
+            transform: scale(0.97);
+            opacity: 0.6;
+          }
+          to {
+            transform: none;
+            opacity: 1;
+          }
+        }
+      }
+      @media (max-width: 420px) {
+        .groups {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
 
+    <div class="wrap">
+      <header class="top">
+        <div class="toprow">
+          <h1>Formula · C1 phrase cards</h1>
+        </div>
+        <p id="sub">Phrase cards and exercises · Level C1</p>
+      </header>
+      <nav class="tabs" role="tablist" aria-label="Sections">
+        <button role="tab" data-act="tab" data-v="cards" id="t-cards">
+          Cards
+        </button>
+        <button role="tab" data-act="tab" data-v="ex" id="t-ex">
+          Exercises
+        </button>
+        <button role="tab" data-act="tab" data-v="set" id="t-set">
+          Settings
+        </button>
+      </nav>
+      <main id="main"></main>
+    </div>
+
+    <script>
+      /* ============ DATA: edit here ============
+CARDS: lesson, en, uk (English meaning), ex (exactly one ___), ans (word in the gap), col (2-3 collocations),
+       dict (word for Cambridge), say (optional: how to read it aloud), alt (optional: other accepted answers),
+       acc (optional: other accepted dictation answers)
+FORKS: lesson, word, ok (go with it), bad (does not), why
+SORTS: lesson, title, cats (group name -> phrases from CARDS)  */
+      /*DATA START*/
+      const L1 = "Lesson 1";
+      const CARDS = [
+        {
+          lesson: L1,
+          en: "come about",
+          uk: "to happen, especially gradually or by chance",
+          ex: "How did the merger ___ about in the first place?",
+          ans: "come",
+          col: [
+            "how did it come about",
+            "come about by chance",
+            "a change came about",
+          ],
+          dict: "come about",
+        },
+        {
+          lesson: L1,
+          en: "come round to",
+          uk: "to change your opinion and finally accept an idea",
+          ex: "He eventually ___ round to our way of thinking.",
+          ans: "came",
+          col: [
+            "come round to the idea",
+            "come round to my view",
+            "slowly come round to",
+          ],
+          dict: "come round to",
+        },
+        {
+          lesson: L1,
+          en: "do away with",
+          uk: "to get rid of something; to abolish it",
+          ex: "The school decided to ___ away with end-of-year exams.",
+          ans: "do",
+          col: [
+            "do away with a law",
+            "do away with a rule",
+            "do away with the need for",
+          ],
+          dict: "do away with",
+        },
+        {
+          lesson: L1,
+          en: "get (somebody) out of",
+          uk: "to help someone escape from a difficult situation or avoid doing something",
+          ex: "Her quick thinking helped ___ the whole team out of a tricky situation.",
+          ans: "get",
+          col: [
+            "get someone out of trouble",
+            "get out of a meeting",
+            "get out of doing something",
+          ],
+          dict: "get out of",
+          say: "get somebody out of",
+        },
+        {
+          lesson: L1,
+          en: "go into",
+          uk: "to examine or explain something in detail",
+          ex: "I won't ___ into the details now, but it was a nightmare.",
+          ans: "go",
+          col: ["go into detail", "go into the matter", "go into more depth"],
+          dict: "go into",
+        },
+        {
+          lesson: L1,
+          en: "mess about with",
+          uk: "to change or handle something carelessly, without knowing what you are doing",
+          ex: "Don't ___ about with the settings unless you know what you're doing.",
+          ans: "mess",
+          col: [
+            "mess about with the settings",
+            "mess about with the wiring",
+            "stop messing about",
+          ],
+          dict: "mess about",
+        },
+        {
+          lesson: L1,
+          en: "refer to",
+          uk: "to mention or speak about someone or something",
+          ex: "In her speech, she ___ to the crisis only briefly.",
+          ans: "referred",
+          col: [
+            "refer to a dictionary",
+            "refer to the report",
+            "refer to someone as",
+          ],
+          dict: "refer to",
+        },
+        {
+          lesson: L1,
+          en: "run (something) past",
+          uk: "to tell someone your idea to get their opinion",
+          ex: "Could I ___ a few ideas past you before the meeting?",
+          ans: "run",
+          col: [
+            "run an idea past someone",
+            "run it past the boss",
+            "run a draft past a colleague",
+          ],
+          dict: "run something past someone",
+          say: "run something past",
+        },
+        {
+          lesson: L1,
+          en: "set back",
+          uk: "to delay the progress of something; (informal) to cost a lot of money",
+          ex: "The storm ___ the project back by about two months.",
+          ans: "set",
+          col: [
+            "set back the schedule",
+            "set someone back a lot of money",
+            "a serious setback",
+          ],
+          dict: "set back",
+        },
+        {
+          lesson: L1,
+          en: "shy away from",
+          uk: "to avoid doing something because you are nervous or unsure",
+          ex: "She never ___ away from a challenge.",
+          ans: "shies",
+          col: [
+            "shy away from conflict",
+            "shy away from the truth",
+            "shy away from responsibility",
+          ],
+          dict: "shy away from",
+        },
+        {
+          lesson: L1,
+          en: "stem from",
+          uk: "to be caused by something",
+          ex: "Most of his anxiety ___ from a difficult childhood.",
+          ans: "stems",
+          col: [
+            "stem from a lack of",
+            "problems stem from",
+            "stem from the fact that",
+          ],
+          dict: "stem from",
+        },
+        {
+          lesson: L1,
+          en: "distinctive feature",
+          uk: "a quality that makes something easy to recognise",
+          ex: "The tower's most ___ feature is its leaning top.",
+          ans: "distinctive",
+          col: [
+            "a distinctive feature",
+            "a distinctive style",
+            "a distinctive flavour",
+          ],
+          dict: "distinctive",
+        },
+        {
+          lesson: L1,
+          en: "exceptionally difficult",
+          uk: "extremely hard, much more than usual",
+          ex: "The exam was ___ difficult; hardly anyone finished it.",
+          ans: "exceptionally",
+          col: [
+            "exceptionally talented",
+            "exceptionally rare",
+            "exceptionally well",
+          ],
+          dict: "exceptionally",
+        },
+        {
+          lesson: L1,
+          en: "heartfelt emotion",
+          uk: "a deep and sincere feeling",
+          ex: "She spoke with such ___ emotion that the audience was in tears.",
+          ans: "heartfelt",
+          col: [
+            "heartfelt thanks",
+            "a heartfelt apology",
+            "heartfelt gratitude",
+          ],
+          dict: "heartfelt",
+        },
+        {
+          lesson: L1,
+          en: "highly symmetrical",
+          uk: "very balanced, with both sides almost identical",
+          ex: "The building is highly ___, with identical wings on either side.",
+          ans: "symmetrical",
+          col: [
+            "perfectly symmetrical",
+            "a symmetrical design",
+            "a symmetrical shape",
+          ],
+          dict: "symmetrical",
+        },
+        {
+          lesson: L1,
+          en: "highly thought of",
+          uk: "respected and admired by other people",
+          ex: "Her colleagues all agree that she is ___ thought of in the company.",
+          ans: "highly",
+          col: ["highly thought of", "highly regarded", "be well thought of"],
+          dict: "highly",
+        },
+        {
+          lesson: L1,
+          en: "relatively unsurprising",
+          uk: "not very surprising, compared with other things",
+          ex: "Given the weather forecast, the delay was ___ unsurprising.",
+          ans: "relatively",
+          col: ["relatively easy", "relatively few", "relatively speaking"],
+          dict: "relatively",
+        },
+        {
+          lesson: L1,
+          en: "remarkably beautiful",
+          uk: "extraordinarily beautiful, in a way that you notice",
+          ex: "The old town looked ___ beautiful at sunrise.",
+          ans: "remarkably",
+          col: ["remarkably well", "remarkably similar", "remarkably quick"],
+          dict: "remarkably",
+        },
+        {
+          lesson: L1,
+          en: "stark contrast",
+          uk: "a very clear and obvious difference",
+          ex: "The luxury hotels stand in ___ contrast to the poor villages nearby.",
+          ans: "stark",
+          col: ["in stark contrast to", "a stark reminder", "a stark warning"],
+          dict: "stark",
+        },
+        {
+          lesson: L1,
+          en: "unique combination",
+          uk: "a mixture of things that is unlike any other",
+          ex: "The dish is a ___ combination of sweet and spicy flavours.",
+          ans: "unique",
+          col: [
+            "a unique opportunity",
+            "a unique blend of",
+            "a unique feature",
+          ],
+          dict: "unique",
+        },
+        {
+          lesson: L1,
+          en: "unsolved mystery",
+          uk: "something strange that has never been explained",
+          ex: "The disappearance remains an ___ mystery to this day.",
+          ans: "unsolved",
+          col: ["an unsolved crime", "an unsolved case", "an unsolved problem"],
+          dict: "unsolved",
+        },
+        {
+          lesson: L1,
+          en: "adversity",
+          uk: "a very difficult or unlucky situation",
+          ex: "She showed great courage in the face of ___.",
+          ans: "adversity",
+          col: [
+            "in the face of adversity",
+            "overcome adversity",
+            "adversity and hardship",
+          ],
+          dict: "adversity",
+        },
+        {
+          lesson: L1,
+          en: "brevity",
+          uk: "the quality of being short and to the point",
+          ex: "I appreciated the ___ of her report; it was only one page long.",
+          ans: "brevity",
+          col: [
+            "for the sake of brevity",
+            "brevity and clarity",
+            "the brevity of a message",
+          ],
+          dict: "brevity",
+        },
+        {
+          lesson: L1,
+          en: "chunk",
+          uk: "a large piece or part of something",
+          ex: "A large ___ of my salary goes on rent.",
+          ans: "chunk",
+          col: ["a big chunk of", "a chunk of time", "a chunk of cheese"],
+          dict: "chunk",
+        },
+        {
+          lesson: L1,
+          en: "cradle",
+          uk: "the place where something began (also: a baby's small bed)",
+          ex: "Greece is often called the ___ of democracy.",
+          ans: "cradle",
+          col: [
+            "the cradle of civilisation",
+            "from the cradle to the grave",
+            "rock a cradle",
+          ],
+          dict: "cradle",
+        },
+        {
+          lesson: L1,
+          en: "mantra",
+          uk: "a word or phrase you repeat often as a guiding principle",
+          ex: '"Keep it simple" has become my personal ___.',
+          ans: "mantra",
+          col: ["a personal mantra", "the company's mantra", "repeat a mantra"],
+          dict: "mantra",
+        },
+        {
+          lesson: L1,
+          en: "protagonist",
+          uk: "the main character in a film, book or play",
+          ex: "The ___ of the novel is a young detective with a secret.",
+          ans: "protagonist",
+          col: [
+            "the main protagonist",
+            "the protagonist of a film",
+            "a central protagonist",
+          ],
+          dict: "protagonist",
+        },
+        {
+          lesson: L1,
+          en: "punch line",
+          uk: "the last part of a joke, which makes it funny",
+          ex: "He told the joke so badly that he ruined the punch ___.",
+          ans: "line",
+          col: [
+            "deliver the punch line",
+            "miss the punch line",
+            "a good punch line",
+          ],
+          dict: "punchline",
+        },
+        {
+          lesson: L1,
+          en: "repercussions",
+          uk: "unwanted effects that follow an action or event",
+          ex: "The decision could have serious ___ for the whole industry.",
+          ans: "repercussions",
+          col: [
+            "serious repercussions",
+            "far-reaching repercussions",
+            "face the repercussions",
+          ],
+          dict: "repercussion",
+        },
+        {
+          lesson: L1,
+          en: "stance",
+          uk: "your opinion or position on something, especially one you state publicly",
+          ex: "The company has taken a firm ___ against bribery.",
+          ans: "stance",
+          col: [
+            "take a firm stance",
+            "a clear stance on",
+            "change your stance",
+          ],
+          dict: "stance",
+        },
+        {
+          lesson: L1,
+          en: "swirl",
+          uk: "a twisting, circular movement or pattern",
+          ex: "A ___ of dust rose behind the car as it drove away.",
+          ans: "swirl",
+          col: ["a swirl of smoke", "a swirl of colour", "swirl around"],
+          dict: "swirl",
+        },
+        {
+          lesson: L1,
+          en: "the naked eye",
+          uk: "normal eyesight, without a telescope or microscope",
+          ex: "The planet is just visible to the ___ eye.",
+          ans: "naked",
+          col: [
+            "visible to the naked eye",
+            "invisible to the naked eye",
+            "seen with the naked eye",
+          ],
+          dict: "naked eye",
+        },
+        {
+          lesson: L1,
+          en: "accumulate knowledge",
+          uk: "to gradually gather more and more knowledge",
+          ex: "Students ___ knowledge gradually, not overnight.",
+          ans: "accumulate",
+          col: [
+            "accumulate wealth",
+            "accumulate evidence",
+            "accumulate experience",
+          ],
+          dict: "accumulate",
+        },
+        {
+          lesson: L1,
+          en: "boost energy",
+          uk: "to increase the amount of energy you have",
+          ex: "A short walk can ___ your energy levels in the afternoon.",
+          ans: "boost",
+          col: ["boost confidence", "boost sales", "boost the economy"],
+          dict: "boost",
+        },
+        {
+          lesson: L1,
+          en: "complicate matters",
+          uk: "to make a situation more difficult",
+          ex: "To ___ matters further, the train strike began that morning.",
+          ans: "complicate",
+          col: [
+            "to complicate matters further",
+            "complicate things",
+            "complicate the issue",
+          ],
+          dict: "complicate",
+        },
+        {
+          lesson: L1,
+          en: "deepen understanding",
+          uk: "to understand something better and more fully",
+          ex: "Reading widely can ___ your understanding of other cultures.",
+          ans: "deepen",
+          col: [
+            "deepen your knowledge",
+            "deepen the crisis",
+            "deepen a friendship",
+          ],
+          dict: "deepen",
+        },
+        {
+          lesson: L1,
+          en: "determine the facts",
+          uk: "to find out what really happened or what is true",
+          ex: "The inquiry aims to ___ the facts before blaming anyone.",
+          ans: "determine",
+          col: [
+            "determine the cause",
+            "determine the outcome",
+            "determine whether",
+          ],
+          dict: "determine",
+        },
+        {
+          lesson: L1,
+          en: "draw on experience",
+          uk: "to use your past experience to help you now",
+          ex: "In the interview, she ___ on her experience of working abroad.",
+          ans: "drew",
+          col: [
+            "draw on knowledge",
+            "draw on resources",
+            "draw on past experience",
+          ],
+          dict: "draw on",
+        },
+        {
+          lesson: L1,
+          en: "establish a rapport",
+          uk: "to create a close, friendly understanding with someone",
+          ex: "A good teacher can quickly ___ a rapport with students.",
+          ans: "establish",
+          col: ["build a rapport", "a good rapport", "a rapport with clients"],
+          dict: "rapport",
+        },
+        {
+          lesson: L1,
+          en: "exude confidence",
+          uk: "to clearly show a feeling or quality in a strong way",
+          ex: "The candidate walked in and seemed to ___ confidence.",
+          ans: "exude",
+          col: ["exude charm", "exude calm", "exude warmth"],
+          dict: "exude",
+        },
+        {
+          lesson: L1,
+          en: "heed advice",
+          uk: "to pay attention to advice or a warning",
+          ex: "If only he had ___ his doctor's advice!",
+          ans: "heeded",
+          col: ["heed a warning", "heed a call", "fail to heed"],
+          dict: "heed",
+        },
+        {
+          lesson: L1,
+          en: "meet the criteria",
+          uk: "to satisfy the conditions that are required",
+          ex: "Only candidates who ___ the criteria will be invited to interview.",
+          ans: "meet",
+          col: [
+            "meet the requirements",
+            "meet the standard",
+            "meet a deadline",
+          ],
+          dict: "criteria",
+        },
+        {
+          lesson: L1,
+          en: "strike up a friendship",
+          uk: "to start a friendship, often quickly or by chance",
+          ex: "On the trip, she ___ up a friendship with a Canadian student.",
+          ans: "struck",
+          col: [
+            "strike up a conversation",
+            "strike up a relationship",
+            "strike up a friendship with",
+          ],
+          dict: "strike up",
+        },
+        {
+          lesson: L1,
+          en: "thwart expectations",
+          uk: "to stop something from happening as people expected",
+          ex: "The sudden storm ___ our expectations of a relaxing weekend.",
+          ans: "thwarted",
+          col: [
+            "thwart a plan",
+            "thwart an attempt",
+            "thwart someone's ambitions",
+          ],
+          dict: "thwart",
+        },
+        {
+          lesson: L1,
+          en: "armed (with)",
+          uk: "carrying weapons; or equipped with useful knowledge or tools",
+          ex: "She arrived at the meeting ___ with facts and figures.",
+          ans: "armed",
+          col: ["armed with facts", "armed with a camera", "heavily armed"],
+          dict: "armed",
+          say: "armed with",
+        },
+        {
+          lesson: L1,
+          en: "compatible (with)",
+          uk: "able to work or exist together without problems",
+          ex: "This software isn't ___ with older computers.",
+          ans: "compatible",
+          col: ["fully compatible", "compatible software", "compatible with"],
+          dict: "compatible",
+          say: "compatible with",
+        },
+        {
+          lesson: L1,
+          en: "diluted",
+          uk: "made weaker by adding water or another liquid",
+          ex: "The juice tasted ___; someone had added far too much water.",
+          ans: "diluted",
+          col: ["diluted with water", "a diluted version of", "diluted juice"],
+          dict: "dilute",
+        },
+        {
+          lesson: L1,
+          en: "intimidating",
+          uk: "frightening, or making you feel nervous and less confident",
+          ex: "Speaking in front of two hundred people is an ___ prospect.",
+          ans: "intimidating",
+          col: [
+            "an intimidating atmosphere",
+            "an intimidating prospect",
+            "find it intimidating",
+          ],
+          dict: "intimidating",
+        },
+        {
+          lesson: L1,
+          en: "plausible",
+          uk: "likely to be true; reasonable and believable",
+          ex: "His explanation sounded ___, but I didn't quite believe it.",
+          ans: "plausible",
+          col: [
+            "a plausible excuse",
+            "a plausible explanation",
+            "seem plausible",
+          ],
+          dict: "plausible",
+        },
+        {
+          lesson: L1,
+          en: "straightforward",
+          uk: "simple and easy to understand or do",
+          ex: "The instructions were clear and the process was ___.",
+          ans: "straightforward",
+          col: [
+            "a straightforward answer",
+            "fairly straightforward",
+            "a straightforward task",
+          ],
+          dict: "straightforward",
+        },
+        {
+          lesson: L1,
+          en: "undervalued",
+          uk: "not valued as much as it should be",
+          ex: "Many nurses feel ___ and underpaid.",
+          ans: "undervalued",
+          col: [
+            "feel undervalued",
+            "undervalued and underpaid",
+            "an undervalued asset",
+          ],
+          dict: "undervalue",
+        },
+        {
+          lesson: L1,
+          en: "a far cry from",
+          uk: "very different from something",
+          ex: "Her tiny flat is a far ___ from the mansion she grew up in.",
+          ans: "cry",
+          col: [
+            "a far cry from the past",
+            "a far cry from perfect",
+            "a far cry from what I expected",
+          ],
+          dict: "far cry",
+        },
+        {
+          lesson: L1,
+          en: "can't string a sentence together",
+          uk: "to be unable to speak clearly or fluently, for example from nerves",
+          ex: "I was so nervous that I couldn't ___ a sentence together.",
+          ans: "string",
+          col: [
+            "couldn't string a sentence together",
+            "string words together",
+            "string two words together",
+          ],
+          dict: "string together",
+        },
+        {
+          lesson: L1,
+          en: "different walks of life",
+          uk: "different social backgrounds, jobs and ways of living",
+          ex: "The club welcomes people from all ___ of life.",
+          ans: "walks",
+          col: [
+            "people from all walks of life",
+            "from every walk of life",
+            "a different walk of life",
+          ],
+          dict: "walk of life",
+        },
+        {
+          lesson: L1,
+          en: "eyes go vacant",
+          uk: "to look blank and empty, as if you are not thinking or listening",
+          ex: "Whenever he talks about taxes, her eyes go ___.",
+          ans: "vacant",
+          col: ["a vacant stare", "a vacant look", "a vacant expression"],
+          dict: "vacant",
+        },
+        {
+          lesson: L1,
+          en: "it's more a case of",
+          uk: "used to say what is really happening or what the real problem is",
+          ex: "It's not that I dislike her; it's more a ___ of not having enough time.",
+          ans: "case",
+          col: ["a classic case of", "a case of bad luck", "more a case of"],
+          dict: "case",
+        },
+        {
+          lesson: L1,
+          en: "keep someone in the loop",
+          uk: "to keep someone informed about what is happening",
+          ex: "Please keep me in the ___ about any changes to the schedule.",
+          ans: "loop",
+          col: ["keep me in the loop", "in the loop", "out of the loop"],
+          dict: "in the loop",
+        },
+        {
+          lesson: L1,
+          en: "let me get this straight",
+          uk: "used to check you have understood, often with surprise or annoyance",
+          ex: "Let me get this ___: you booked the flights without checking the dates?",
+          ans: "straight",
+          col: [
+            "get the facts straight",
+            "set the record straight",
+            "get something straight",
+          ],
+          dict: "get something straight",
+        },
+        {
+          lesson: L1,
+          en: "on the go",
+          uk: "very busy and always moving from one activity to another",
+          ex: "I've been on the ___ since six this morning, so I'm exhausted.",
+          ans: "go",
+          col: ["always on the go", "on the go all day", "a snack on the go"],
+          dict: "on the go",
+        },
+        {
+          lesson: L1,
+          en: "rooted to the spot",
+          uk: "unable to move, usually because of fear or shock",
+          ex: "When she saw the snake, she stood ___ to the spot.",
+          ans: "rooted",
+          col: [
+            "stand rooted to the spot",
+            "remain rooted to the spot",
+            "rooted in tradition",
+          ],
+          dict: "rooted to the spot",
+        },
+        {
+          lesson: L1,
+          en: "take exception to",
+          uk: "to feel offended or annoyed by something",
+          ex: "He took ___ to my comment and left the room.",
+          ans: "exception",
+          col: [
+            "take exception to a remark",
+            "take exception to the tone",
+            "take great exception to",
+          ],
+          dict: "take exception to",
+        },
+        {
+          lesson: L1,
+          en: "to and fro",
+          uk: "backwards and forwards, repeatedly",
+          ex: "The pendulum swung slowly to and ___.",
+          ans: "fro",
+          col: ["walk to and fro", "swing to and fro", "sway to and fro"],
+          dict: "to and fro",
+        },
+      ];
+      const FORKS = [
+        {
+          lesson: L1,
+          word: "draw",
+          ok: ["on experience", "a conclusion", "attention"],
+          bad: ["a rapport"],
+          why: "We draw on experience, draw a conclusion and draw attention. We establish or build a rapport; we don't draw one.",
+        },
+        {
+          lesson: L1,
+          word: "meet",
+          ok: ["the criteria", "a deadline", "the requirements"],
+          bad: ["the facts"],
+          why: "We meet the criteria, a deadline and the requirements. We determine the facts; we don't meet them.",
+        },
+        {
+          lesson: L1,
+          word: "highly",
+          ok: ["symmetrical", "thought of", "recommended", "unlikely"],
+          bad: ["difficult"],
+          why: "Highly goes with symmetrical, thought of, recommended and unlikely. With difficult we say exceptionally or extremely difficult.",
+        },
+        {
+          lesson: L1,
+          word: "stark",
+          ok: ["contrast", "reminder", "warning"],
+          bad: ["mystery"],
+          why: "We say a stark contrast, a stark reminder and a stark warning. A mystery is unsolved, not stark.",
+        },
+      ];
+      const SORTS = [
+        {
+          lesson: L1,
+          title: "Sort the phrases into four groups",
+          cats: {
+            "Phrasal verbs": [
+              "come about",
+              "do away with",
+              "shy away from",
+              "stem from",
+            ],
+            "Verb + noun": [
+              "accumulate knowledge",
+              "boost energy",
+              "meet the criteria",
+              "heed advice",
+            ],
+            Adjectives: ["diluted", "plausible", "intimidating", "undervalued"],
+            "Useful phrases": [
+              "a far cry from",
+              "on the go",
+              "to and fro",
+              "rooted to the spot",
+            ],
+          },
+        },
+      ];
+      /*DATA END*/
+
+      /* ============ interface texts (en / es) ============ */
+      const TX = {
+        en: {
+          sub: "Phrase cards and exercises · Level C1",
+          tabCards: "Cards",
+          tabEx: "Exercises",
+          tabSet: "Settings",
+          langAria: "Language",
+          lessonsAria: "Lessons",
+          allLessons: "All lessons · mix",
+          modeAria: "Mode",
+          mToday: "Today",
+          mAll: "All cards",
+          mReview: "Review only",
+          mNew: "New only",
+          shuffle: "Shuffle",
+          reverse: "Reverse",
+          restart: "Start over",
+          stats: "{0} phrases · {1} new · {2} to review · {3} known",
+          warn: "This browser is not saving progress. Open the page in Safari or Chrome.",
+          emptyToday:
+            "Nothing is due today. You can open All cards or New only.",
+          emptyReview: "No words to review. Well done!",
+          emptyNew: "No new phrases left in these lessons.",
+          emptyAll: "There are no phrases in these lessons.",
+          allDone: "All done",
+          retryDone: "Review finished",
+          batchDone: "Batch finished",
+          known: "known",
+          toReviewAgain: "to review again",
+          wordsToReview: "Words to review",
+          noReview: "No words to review. Great work!",
+          btnRetry: "Review these words",
+          btnAnother: "Another batch",
+          btnAgain: "Start again",
+          btnToEx: "To exercises",
+          reviewingWords: "Reviewing words",
+          whichPhrase: "Which phrase is this?",
+          listen: "Listen",
+          tapFlip: "Tap the card to flip it",
+          flipAria: "Flip card",
+          backAria: "Back of the card. Tap to flip.",
+          showAns: "Show the answer",
+          again: "Review again",
+          know: "I know it",
+          kbd: "On a computer: space flips · ← review again · → I know it",
+          exTitle: "Exercises",
+          exIntro: "Phrases come from the lessons you chose on the Cards tab.",
+          exAll: "All phrases",
+          exRev: "Review only",
+          exAvail: "{0} phrases available",
+          exBack: "← All exercises",
+          exNoSet: "There is no exercise for these lessons yet.",
+          exNoPhrases:
+            "No phrases here. Choose other lessons or switch to All phrases.",
+          exn_match: "Matching",
+          exd_match: "Connect each phrase with its meaning",
+          exn_gap: "Fill the gap",
+          exd_gap: "Type the missing word",
+          exn_quiz: "Quiz",
+          exd_quiz: "Choose the right answer",
+          exn_dict: "Dictation",
+          exd_dict: "Listen and type the phrase",
+          exn_fork: "Forks",
+          exd_fork: "Which words go with the key word?",
+          exn_sort: "Categories",
+          exd_sort: "Sort phrases into groups",
+          mistakes: "Mistakes",
+          noMistakes: "No mistakes. Great work!",
+          addRev: "Add these words to review",
+          added: "Added to review ✓",
+          tryAgain: "Try again",
+          allEx: "All exercises",
+          rMatch: "Matching finished",
+          rGap: "Fill the gap: result",
+          rQuiz: "Quiz: result",
+          rDict: "Dictation: result",
+          rFork: "Forks: result",
+          matchHelp: "Tap a phrase, then its meaning.",
+          meaningLbl: "Meaning: ",
+          firstLetter: "First letter",
+          firstLetterLbl: "First letter: ",
+          yourAnswer: "Your answer",
+          correct: "Correct!",
+          answerIs: "The answer is: ",
+          next: "Next",
+          check: "Check",
+          quizQ1: "Which phrase means this?",
+          quizQ0: "What does this mean?",
+          dictHelp: "Listen and type the phrase.",
+          slower: "Slower",
+          typeHear: "Type what you hear",
+          phraseIs: "The phrase is: ",
+          forkHelp: "Select every option that goes with the word.",
+          forkOk: "Correct! ",
+          forkNo: "Not quite. ",
+          sortHelp:
+            "Tap a phrase, then tap a group. Tap a placed phrase to move it back.",
+          sortAll: "All phrases are placed.",
+          sortScore: "{0} / {1} in the right group",
+          reset: "Reset",
+          nextSet: "Next set",
+          langH: "Language",
+          uiLang: "Interface language",
+          meanLang: "Meanings on the cards",
+          meanAuto: "Same as interface",
+          meanEn: "English explanation",
+          meanEs: "Spanish translation",
+          voice: "Voice",
+          voiceLbl: "Voice for pronunciation (the best ones are marked ★)",
+          noVoice:
+            "No English voice was found in this browser. Try Safari or Chrome.",
+          iphone:
+            "<b>iPhone:</b> open Settings → Accessibility → Spoken Content → Voices → English, then download a voice marked Enhanced or Premium. Come back and choose it here.",
+          progressH: "Progress",
+          saveHint:
+            "Always open this page in the same browser (Safari or Chrome), not inside Telegram or Instagram. Your progress is saved in that browser.",
+          copyCode: "Copy progress code",
+          codePh: "Your progress code appears here",
+          restoreLbl: "Restore from code (to move to another device)",
+          restorePh: "Paste a progress code here",
+          restoreBtn: "Restore",
+          resetBtn: "Reset progress",
+          resetConfirm: "Click again to confirm reset",
+          msgCopied: "Code copied. Paste it on your other device.",
+          msgSelect: "Select the code above and copy it.",
+          msgNoCode: "Could not make a code.",
+          msgPaste: "Paste a code first.",
+          msgRestored: "Progress restored.",
+          msgBad: "This code does not work. Check that you copied all of it.",
+          msgReset: "Progress was reset.",
+          sample: "Hello! This is how I sound. Open your books at page twenty.",
+        },
+      };
+
+      /* ============ helpers ============ */
+      const $ = (s) => document.querySelector(s);
+      const esc = (s) =>
+        String(s).replace(
+          /[&<>"]/g,
+          (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c],
+        );
+      const norm = (s) =>
+        String(s)
+          .toLowerCase()
+          .replace(/[^a-z0-9]/g, "");
+      const shuffle = (a) => {
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+      };
+      const sample = (a, n) => shuffle(a.slice()).slice(0, n);
+      const BY = {},
+        IDX = {};
+      CARDS.forEach((c, i) => {
+        BY[c.en] = c;
+        IDX[c.en] = i;
+      });
+      const LESSONS = [...new Set(CARDS.map((c) => c.lesson))];
+      const IV = [1, 3, 7, 14, 30, 60];
+      const KEY = "formula-c1-v1";
+      const today = () => {
+        const d = new Date();
+        return Math.floor(
+          (d.getTime() - d.getTimezoneOffset() * 60000) / 864e5,
+        );
+      };
+      const ICON =
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+
+      /* ============ saved state ============ */
+      let S = {
+        prog: {},
+        batches: {},
+        set: {
+          sel: [],
+          mode: "today",
+          shuffle: false,
+          reverse: false,
+          voice: "",
+          exSrc: "all",
+          lang: "en",
+          mean: "auto",
+        },
+      };
+      let UI = { tab: "cards" },
+        flipped = false,
+        gapOpen = false,
+        X = null,
+        resetArmed = false,
+        resetTimer = 0,
+        warned = false;
+      function load() {
+        try {
+          const r = localStorage.getItem(KEY);
+          if (r) {
+            const o = JSON.parse(r);
+            if (o && typeof o === "object") {
+              S.prog = o.prog || {};
+              S.batches = o.batches || {};
+              S.set = Object.assign(S.set, o.set || {});
+            }
+          }
+        } catch (e) {
+          warned = true;
+        }
+        S.set.sel = (S.set.sel || []).filter((l) => LESSONS.includes(l));
+        if (S.set.sel.length === LESSONS.length) S.set.sel = [];
+        if (S.set.lang !== "es") S.set.lang = "en";
+        if (!["auto", "en", "es"].includes(S.set.mean)) S.set.mean = "auto";
+      }
+      function save() {
+        try {
+          localStorage.setItem(KEY, JSON.stringify(S));
+        } catch (e) {
+          warned = true;
+        }
+      }
+
+      /* ============ language helpers ============ */
+      const t = (k, ...a) => {
+        let s = (TX[S.set.lang] && TX[S.set.lang][k]) || TX.en[k] || k;
+        a.forEach((v, i) => {
+          s = s.split("{" + i + "}").join(v);
+        });
+        return s;
+      };
+      const meanLang = () =>
+        S.set.mean === "en" || S.set.mean === "es" ? S.set.mean : S.set.lang;
+      const mean = (c) => c.uk;
+      const lname = (l) => l;
+      const catName = (n) => n;
+      const sortTitle = (x) => x;
+      const whyText = (f) => f.why;
+      const modeName = (m) =>
+        t({ today: "mToday", all: "mAll", review: "mReview", new: "mNew" }[m]);
+
+      /* ============ audio ============ */
+      let VOICES = [];
+      const NOVELTY =
+        /^(Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Wobble|Zarvox|Trinoids|Whisper|Superstar|Jester|Organ|Good News|Hysterical|Deranged|Pipe Organ|Fred|Junior|Ralph|Kathy|Princess|Agnes|Grandma|Grandpa|Flo|Reed|Rocko|Sandy|Shelley|Eddy)\b/i;
+      const GOOD = /natural|neural|premium|enhanced|siri|google/i;
+      const vScore = (v) =>
+        (GOOD.test(v.name) ? 10 : 0) +
+        (/en[-_]GB/i.test(v.lang) ? 3 : 0) +
+        (/en[-_](US|AU|IE)/i.test(v.lang) ? 1 : 0);
+      function loadVoices() {
+        try {
+          VOICES = speechSynthesis
+            .getVoices()
+            .filter(
+              (v) => /^en([-_]|$)/i.test(v.lang) && !NOVELTY.test(v.name),
+            );
+          VOICES.sort((a, b) => vScore(b) - vScore(a));
+        } catch (e) {
+          VOICES = [];
+        }
+      }
+      function pickVoice() {
+        return (
+          VOICES.find((v) => v.voiceURI === S.set.voice) || VOICES[0] || null
+        );
+      }
+      function speak(t, slow) {
+        try {
+          if (!("speechSynthesis" in window)) return;
+          speechSynthesis.cancel();
+          const u = new SpeechSynthesisUtterance(t);
+          const v = pickVoice();
+          if (v) {
+            u.voice = v;
+            u.lang = v.lang;
+          } else u.lang = "en-GB";
+          u.rate = slow ? 0.6 : 0.9;
+          speechSynthesis.speak(u);
+        } catch (e) {}
+      }
+      const sayText = (c) => c.say || c.en;
+      try {
+        loadVoices();
+        if ("speechSynthesis" in window)
+          speechSynthesis.addEventListener("voiceschanged", () => {
+            loadVoices();
+            if (UI.tab === "set") render();
+          });
+      } catch (e) {}
+
+      /* ============ pools and batches ============ */
+      const pool = () =>
+        CARDS.filter((c) => !S.set.sel.length || S.set.sel.includes(c.lesson));
+      const isAgain = (c) => S.prog[c.en] && S.prog[c.en].again;
+      function sigOf() {
+        return (
+          S.set.mode +
+          "|" +
+          S.set.sel.slice().sort().join(",") +
+          "|" +
+          (S.set.shuffle ? "s" : "o")
+        );
+      }
+      function buildIds() {
+        const p = pool(),
+          t0 = today(),
+          m = S.set.mode,
+          pr = (c) => S.prog[c.en];
+        let list;
+        if (m === "today") {
+          const again = p.filter((c) => pr(c) && pr(c).again);
+          const due = p
+            .filter((c) => pr(c) && !pr(c).again && pr(c).due <= t0)
+            .sort((a, b) => pr(a).due - pr(b).due);
+          const nw = p.filter((c) => !pr(c));
+          list = [...again, ...due, ...nw].slice(0, 20);
+        } else if (m === "review") list = p.filter((c) => pr(c) && pr(c).again);
+        else if (m === "new") list = p.filter((c) => !pr(c));
+        else list = p.slice();
+        const ids = list.map((c) => c.en);
+        return S.set.shuffle ? shuffle(ids) : ids;
+      }
+      function getBatch() {
+        const sig = sigOf();
+        let b = S.batches[sig];
+        if (b) {
+          b.ids = b.ids.filter((e) => BY[e]);
+          if (b.pos > b.ids.length) b.pos = b.ids.length;
+          if (
+            S.set.mode === "today" &&
+            !b.retry &&
+            b.pos >= b.ids.length &&
+            b.day !== today()
+          )
+            b = null;
+        }
+        if (!b) {
+          b = { ids: buildIds(), pos: 0, marks: {}, day: today() };
+          S.batches[sig] = b;
+          save();
+        }
+        return b;
+      }
+      const activeOf = (b) => b.retry || b;
+      function rate(known) {
+        const b = getBatch(),
+          a = activeOf(b),
+          en = a.ids[a.pos];
+        if (!en) return;
+        const p =
+          S.prog[en] || (S.prog[en] = { s: 0, due: today(), again: false });
+        if (known) {
+          p.due = today() + IV[Math.min(p.s, IV.length - 1)];
+          p.s = Math.min(p.s + 1, IV.length);
+          p.again = false;
+          a.marks[en] = "k";
+        } else {
+          p.again = true;
+          p.s = 0;
+          p.due = today();
+          a.marks[en] = "a";
+        }
+        a.pos++;
+        flipped = false;
+        gapOpen = false;
+        save();
+        render();
+      }
+      function restart() {
+        const sig = sigOf();
+        delete S.batches[sig];
+        flipped = false;
+        gapOpen = false;
+        save();
+        render();
+      }
+      function anotherBatch() {
+        const sig = sigOf();
+        delete S.batches[sig];
+        flipped = false;
+        gapOpen = false;
+        save();
+        render();
+      }
+      function retryWords() {
+        const b = getBatch(),
+          a = activeOf(b);
+        const ids = a.ids.filter((e) => a.marks[e] === "a");
+        if (!ids.length) return;
+        b.retry = {
+          ids: S.set.shuffle ? shuffle(ids.slice()) : ids,
+          pos: 0,
+          marks: {},
+        };
+        flipped = false;
+        gapOpen = false;
+        save();
+        render();
+      }
+      function addReview(list) {
+        list.forEach((en) => {
+          const p =
+            S.prog[en] || (S.prog[en] = { s: 0, due: today(), again: false });
+          p.again = true;
+          p.s = 0;
+          p.due = today();
+        });
+        save();
+      }
+
+      /* ============ cards tab ============ */
+      function lessonBar() {
+        const n = {};
+        CARDS.forEach((c) => (n[c.lesson] = (n[c.lesson] || 0) + 1));
+        const all = !S.set.sel.length;
+        return (
+          `<div class="chips" role="group" aria-label="${esc(t("lessonsAria"))}"><button class="chip ${all ? "on" : ""}" data-act="lall">${esc(t("allLessons"))}</button>` +
+          LESSONS.map(
+            (l) =>
+              `<button class="chip ${!all && S.set.sel.includes(l) ? "on" : ""}" data-act="lesson" data-v="${esc(l)}">${esc(lname(l))}<small>${n[l]}</small></button>`,
+          ).join("") +
+          `</div>`
+        );
+      }
+      function toggleLesson(l) {
+        let s = S.set.sel.slice();
+        const i = s.indexOf(l);
+        if (i >= 0) s.splice(i, 1);
+        else s.push(l);
+        if (s.length === LESSONS.length) s = [];
+        S.set.sel = s;
+        flipped = false;
+        gapOpen = false;
+        X = null;
+        save();
+        render();
+      }
+      function modeBar() {
+        const M = ["today", "all", "review", "new"];
+        return (
+          `<div class="seg" role="group" aria-label="${esc(t("modeAria"))}">` +
+          M.map(
+            (m) =>
+              `<button class="${S.set.mode === m ? "on" : ""}" data-act="mode" data-v="${m}">${esc(modeName(m))}</button>`,
+          ).join("") +
+          `</div>` +
+          `<div class="row sp"><div class="sw"><button class="tog ${S.set.shuffle ? "on" : ""}" data-act="shuf" aria-pressed="${S.set.shuffle}">${esc(t("shuffle"))}</button><button class="tog ${S.set.reverse ? "on" : ""}" data-act="rev" aria-pressed="${S.set.reverse}">${esc(t("reverse"))}</button></div><button class="tog" data-act="restart">${esc(t("restart"))}</button></div>`
+        );
+      }
+      function statsLine() {
+        const p = pool();
+        let nw = 0,
+          ag = 0,
+          kn = 0;
+        p.forEach((c) => {
+          const r = S.prog[c.en];
+          if (!r) nw++;
+          else if (r.again) ag++;
+          else kn++;
+        });
+        return `<div class="stats">${t("stats", p.length, nw, ag, kn)}</div>`;
+      }
+      function cardHtml(c) {
+        const rev = S.set.reverse,
+          i = IDX[c.en];
+        if (!flipped) {
+          const main = rev
+            ? `<p class="big sm">${esc(mean(c))}</p><p class="tap">${esc(t("whichPhrase"))}</p>`
+            : `<p class="big">${esc(c.en)}</p>`;
+          const snd = rev
+            ? ""
+            : `<button class="btn ghost" data-act="say" data-v="${i}">${ICON}${esc(t("listen"))}</button>`;
+          return `<div class="card" id="card" data-act="flip" tabindex="0" role="button" aria-label="${esc(t("flipAria"))}"><span class="lab">${esc(lname(c.lesson))}</span>${main}${snd}<span class="tap">${esc(t("tapFlip"))}</span></div>`;
+        }
+        const [a, b] = c.ex.split("___");
+        return `<div class="card back" id="card" data-act="flip" tabindex="0" aria-label="${esc(t("backAria"))}">
+    <div class="bhead"><span class="b-en">${esc(c.en)}</span><p class="b-uk">${esc(mean(c))}</p></div>
+    <p class="ex">${esc(a)}<button class="gap" data-act="gap" aria-label="${esc(t("showAns"))}">${gapOpen ? esc(c.ans) : "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"}</button>${esc(b)}</p>
+    <div class="cols">${c.col.map((x) => `<span>${esc(x)}</span>`).join("")}</div>
+    <div class="row"><button class="btn ghost" data-act="say" data-v="${i}">${ICON}${esc(t("listen"))}</button><a class="btn ghost" href="https://dictionary.cambridge.org/search/english/direct/?q=${encodeURIComponent(c.dict)}" target="_blank" rel="noopener noreferrer">Cambridge ↗</a></div></div>`;
+      }
+      function renderCards() {
+        const b = getBatch(),
+          a = activeOf(b);
+        let h = lessonBar() + modeBar() + statsLine();
+        if (warned) h += `<div class="fb no">${esc(t("warn"))}</div>`;
+        const total = a.ids.length;
+        if (!total) {
+          const msg = t(
+            {
+              today: "emptyToday",
+              review: "emptyReview",
+              new: "emptyNew",
+              all: "emptyAll",
+            }[S.set.mode],
+          );
+          h += `<div class="panel cards-empty"><h2>${esc(t("allDone"))}</h2><p class="muted">${esc(msg)}</p></div>`;
+        } else if (a.pos >= total) {
+          const k = a.ids.filter((e) => a.marks[e] === "k").length,
+            rv = a.ids.filter((e) => a.marks[e] === "a");
+          h += `<div class="bar"><i style="width:100%"></i></div><div class="panel"><h2>${esc(b.retry ? t("retryDone") : t("batchDone"))}</h2>
+      <p><b>${k}</b> ${esc(t("known"))} · <b>${rv.length}</b> ${esc(t("toReviewAgain"))}</p>
+      ${rv.length ? `<div><h3>${esc(t("wordsToReview"))}</h3><ul class="list">${rv.map((e) => `<li>${esc(e)} <span class="muted">— ${esc(mean(BY[e]))}</span></li>`).join("")}</ul></div>` : `<p class="muted">${esc(t("noReview"))}</p>`}
+      <div class="row">${rv.length ? `<button class="btn wide" data-act="retry">${esc(t("btnRetry"))}</button>` : ""}<button class="btn wide ${rv.length ? "ghost" : ""}" data-act="another">${esc(S.set.mode === "today" ? t("btnAnother") : t("btnAgain"))}</button><button class="btn wide ghost" data-act="toex">${esc(t("btnToEx"))}</button></div></div>`;
+        } else {
+          const c = BY[a.ids[a.pos]];
+          h += `<div class="row sp"><span class="cnt">${a.pos + 1} / ${total}</span><span class="cnt">${esc(b.retry ? t("reviewingWords") : modeName(S.set.mode))}</span></div>
+      <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${a.pos}"><i style="width:${Math.round((a.pos / total) * 100)}%"></i></div>
+      ${cardHtml(c)}
+      <div class="row"><button class="btn warn wide" data-act="again">${esc(t("again"))}</button><button class="btn good wide" data-act="known">${esc(t("know"))}</button></div>
+      <p class="kbd">${esc(t("kbd"))}</p>`;
+        }
+        return h;
+      }
+
+      /* ============ exercises ============ */
+      const EXIDS = ["match", "gap", "quiz", "dict", "fork", "sort"];
+      function exPool() {
+        const p = pool();
+        return S.set.exSrc === "review" ? p.filter(isAgain) : p;
+      }
+      const inSel = (o) => !S.set.sel.length || S.set.sel.includes(o.lesson);
+      function variants(en) {
+        const exp = (s) => {
+          const m = s.match(/\(([^)]*)\)/);
+          if (!m) return [s];
+          return [...exp(s.replace(m[0], m[1])), ...exp(s.replace(m[0], ""))];
+        };
+        const out = new Set();
+        exp(en).forEach((s) => {
+          const m = s.match(/(\S+)\/(\S+)/);
+          if (m) {
+            out.add(s.replace(m[0], m[1]));
+            out.add(s.replace(m[0], m[2]));
+          } else out.add(s);
+        });
+        return [...out].map(norm);
+      }
+      function startEx(ty) {
+        const p = exPool();
+        X = { type: ty, wrong: [], i: 0, sc: 0, q: [], added: false };
+        if (ty === "fork") {
+          X.q = shuffle(FORKS.filter(inSel)).map((f) => ({
+            f,
+            opts: shuffle([...f.ok, ...f.bad]),
+          }));
+          X.sel = [];
+        } else if (ty === "sort") {
+          X.sets = SORTS.filter(inSel);
+          X.s = 0;
+          if (X.sets.length) initSort();
+        } else if (ty === "match") {
+          const seen = new Set(),
+            items = [];
+          shuffle(p.slice()).forEach((c) => {
+            if (items.length < 6 && !seen.has(mean(c))) {
+              seen.add(mean(c));
+              items.push(c);
+            }
+          });
+          X.items = items;
+          X.L = shuffle(items.map((c) => c.en));
+          X.R = shuffle(items.map((c) => c.en));
+          X.done = [];
+          X.pend = null;
+          X.flash = null;
+        } else if (ty === "quiz") {
+          X.q = sample(p, 10).map((c) => {
+            const dir = Math.random() < 0.5 ? 0 : 1,
+              txt = (o) => (dir ? o.en : mean(o)),
+              right = txt(c),
+              used = new Set([right]),
+              d = [];
+            shuffle(CARDS.filter((o) => o.en !== c.en)).forEach((o) => {
+              if (d.length < 3 && !used.has(txt(o))) {
+                used.add(txt(o));
+                d.push(txt(o));
+              }
+            });
+            return { c, dir, right, opts: shuffle([right, ...d]) };
+          });
+          X.pick = null;
+        } else X.q = sample(p, 10);
+        X.empty =
+          ty === "fork"
+            ? !X.q.length
+            : ty === "sort"
+              ? !X.sets.length
+              : ty === "match"
+                ? X.items.length < 2
+                : !X.q.length;
+        render();
+      }
+      function initSort() {
+        const s = X.sets[X.s];
+        X.cats = Object.keys(s.cats);
+        X.items = shuffle(Object.values(s.cats).flat());
+        X.place = {};
+        X.pick = null;
+        X.checked = false;
+      }
+      function resultView(label, score, total, note) {
+        const w = [...new Set(X.wrong)];
+        return `<div class="panel"><h2>${esc(label)}</h2><p class="score">${score} / ${total}</p>
+   ${w.length ? `<div><h3>${esc(t("mistakes"))}</h3><ul class="list">${w.map((e) => `<li><b>${esc(e)}</b> <span class="muted">— ${esc(mean(BY[e]))}</span></li>`).join("")}</ul></div>` : `<p>${esc(t("noMistakes"))}</p>`}
+   ${note || ""}
+   <div class="row">${w.length ? `<button class="btn wide" data-act="x-add" ${X.added ? "disabled" : ""}>${esc(X.added ? t("added") : t("addRev"))}</button>` : ""}<button class="btn wide ghost" data-act="x-again">${esc(t("tryAgain"))}</button><button class="btn wide ghost" data-act="x-back">${esc(t("allEx"))}</button></div></div>`;
+      }
+      function renderEx() {
+        if (!X) {
+          const n = exPool().length;
+          return `<div class="panel"><h2>${esc(t("exTitle"))}</h2><p class="muted">${esc(t("exIntro"))}</p>
+      <div class="seg" style="grid-template-columns:1fr 1fr"><button class="${S.set.exSrc === "all" ? "on" : ""}" data-act="exsrc" data-v="all">${esc(t("exAll"))}</button><button class="${S.set.exSrc === "review" ? "on" : ""}" data-act="exsrc" data-v="review">${esc(t("exRev"))}</button></div>
+      <p class="stats">${esc(t("exAvail", n))}</p></div>
+      <div class="menu">${EXIDS.map((e) => `<button class="mi" data-act="xstart" data-v="${e}"><b>${esc(t("exn_" + e))}</b><span>${esc(t("exd_" + e))}</span></button>`).join("")}</div>`;
+        }
+        const back = `<div class="row sp"><button class="tog" data-act="x-back">${esc(t("exBack"))}</button><span class="cnt">${esc(t("exn_" + X.type))}</span></div>`;
+        if (X.empty)
+          return (
+            back +
+            `<div class="panel cards-empty"><p class="muted">${esc(X.type === "fork" || X.type === "sort" ? t("exNoSet") : t("exNoPhrases"))}</p></div>`
+          );
+        return (
+          back +
+          {
+            match: vMatch,
+            gap: vGap,
+            quiz: vQuiz,
+            dict: vDict,
+            fork: vFork,
+            sort: vSort,
+          }[X.type]()
+        );
+      }
+      const prog = () =>
+        `<div class="bar"><i style="width:${Math.round((X.i / X.q.length) * 100)}%"></i></div>`;
+      function vMatch() {
+        if (X.done.length === X.items.length)
+          return resultView(
+            t("rMatch"),
+            X.items.length - new Set(X.wrong).size,
+            X.items.length,
+          );
+        const L = X.L.map((en) => {
+          const d = X.done.includes(en);
+          return `<button class="opt ${d ? "done" : ""} ${X.pend && X.pend.side === "l" && X.pend.k === en ? "on" : ""} ${X.flash && X.flash.l === en ? "bad" : ""}" data-act="x-m" data-side="l" data-k="${esc(en)}" ${d ? "disabled" : ""}>${esc(en)}</button>`;
+        }).join("");
+        const R = X.R.map((en) => {
+          const d = X.done.includes(en);
+          return `<button class="opt ${d ? "done" : ""} ${X.pend && X.pend.side === "r" && X.pend.k === en ? "on" : ""} ${X.flash && X.flash.r === en ? "bad" : ""}" data-act="x-m" data-side="r" data-k="${esc(en)}" ${d ? "disabled" : ""}>${esc(mean(BY[en]))}</button>`;
+        }).join("");
+        return `<div class="panel"><p class="muted">${esc(t("matchHelp"))}</p><div class="mgrid"><div class="col">${L}</div><div class="col">${R}</div></div></div>`;
+      }
+      function vGap() {
+        if (X.i >= X.q.length) return resultView(t("rGap"), X.sc, X.q.length);
+        const c = X.q[X.i],
+          [a, b] = c.ex.split("___"),
+          fb = X.fb;
+        const mid = fb
+          ? `<b>${esc(c.ans)}</b>`
+          : `<span class="muted">_____</span>`;
+        return (
+          prog() +
+          `<div class="panel"><p class="qtext">${esc(a)}${mid}${esc(b)}</p><p class="muted">${esc(t("meaningLbl"))}${esc(mean(c))}</p>${X.hint ? `<p class="muted">${esc(t("firstLetterLbl"))}<b>${esc(c.ans[0])}</b></p>` : ""}
+   <input type="text" id="xin" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" aria-label="${esc(t("yourAnswer"))}" value="${esc(X.val || "")}" ${fb ? "disabled" : ""}>
+   ${fb ? `<div class="fb ${fb === "ok" ? "ok" : "no"}">${esc(fb === "ok" ? t("correct") : t("answerIs") + c.ans)}</div>` : ""}
+   <div class="row">${fb ? `<button class="btn wide" data-primary data-act="x-next">${esc(t("next"))}</button>` : `<button class="btn ghost wide" data-act="x-hint">${esc(t("firstLetter"))}</button><button class="btn wide" data-primary data-act="x-check">${esc(t("check"))}</button>`}</div></div>`
+        );
+      }
+      function vQuiz() {
+        if (X.i >= X.q.length) return resultView(t("rQuiz"), X.sc, X.q.length);
+        const q = X.q[X.i],
+          done = X.pick !== null;
+        return (
+          prog() +
+          `<div class="panel"><p class="muted">${esc(q.dir ? t("quizQ1") : t("quizQ0"))}</p><p class="qtext">${esc(q.dir ? mean(q.c) : q.c.en)}</p>
+   <div class="opts">${q.opts.map((o, i) => `<button class="opt ${done ? (o === q.right ? "good" : i === X.pick ? "bad" : "") : ""}" data-act="x-opt" data-v="${i}" ${done ? "disabled" : ""}>${esc(o)}</button>`).join("")}</div>
+   ${done ? `<button class="btn" data-primary data-act="x-next">${esc(t("next"))}</button>` : ""}</div>`
+        );
+      }
+      function vDict() {
+        if (X.i >= X.q.length) return resultView(t("rDict"), X.sc, X.q.length);
+        const c = X.q[X.i],
+          fb = X.fb;
+        return (
+          prog() +
+          `<div class="panel"><p class="muted">${esc(t("dictHelp"))}</p>
+   <div class="row"><button class="btn ghost wide" data-act="x-say" data-slow="0">${ICON}${esc(t("listen"))}</button><button class="btn ghost wide" data-act="x-say" data-slow="1">${ICON}${esc(t("slower"))}</button></div>
+   <input type="text" id="xin" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" aria-label="${esc(t("typeHear"))}" value="${esc(X.val || "")}" ${fb ? "disabled" : ""}>
+   ${fb ? `<div class="fb ${fb === "ok" ? "ok" : "no"}">${esc(fb === "ok" ? t("correct") : t("phraseIs") + c.en)}</div><p class="muted">${esc(mean(c))}</p>` : ""}
+   <div class="row">${fb ? `<button class="btn wide" data-primary data-act="x-next">${esc(t("next"))}</button>` : `<button class="btn wide" data-primary data-act="x-check">${esc(t("check"))}</button>`}</div></div>`
+        );
+      }
+      function vFork() {
+        if (X.i >= X.q.length) return resultView(t("rFork"), X.sc, X.q.length);
+        const q = X.q[X.i],
+          f = q.f,
+          ch = X.checked;
+        return (
+          prog() +
+          `<div class="panel"><p class="muted">${esc(t("forkHelp"))}</p><p class="qtext">${esc(f.word)} …</p>
+   <div class="opts">${q.opts
+     .map((o, i) => {
+       const s = X.sel.includes(i),
+         ok = f.ok.includes(o);
+       let cl = s ? "on" : "";
+       if (ch) {
+         cl = s && ok ? "good" : s && !ok ? "bad" : !s && ok ? "miss" : "";
+       }
+       return `<button class="opt ${cl}" data-act="x-tog" data-v="${i}" aria-pressed="${s}" ${ch ? "disabled" : ""}>${esc(o)}</button>`;
+     })
+     .join("")}</div>
+   ${ch ? `<div class="fb ${X.fok ? "ok" : "no"}">${esc((X.fok ? t("forkOk") : t("forkNo")) + whyText(f))}</div>` : ""}
+   <div class="row">${ch ? `<button class="btn wide" data-act="x-next">${esc(t("next"))}</button>` : `<button class="btn wide" data-act="x-check" ${X.sel.length ? "" : "disabled"}>${esc(t("check"))}</button>`}</div></div>`
+        );
+      }
+      function vSort() {
+        const s = X.sets[X.s],
+          placed = Object.keys(X.place).length;
+        const chip = (ph, extra) =>
+          `<button class="pc ${extra || ""}" data-act="x-pc" data-v="${esc(ph)}">${esc(ph)}</button>`;
+        const left = X.items.filter((p) => !(p in X.place));
+        const gs = X.cats
+          .map((cn, ci) => {
+            const here = X.items.filter((p) => X.place[p] === cn);
+            return `<div class="grp ${X.pick && !X.checked ? "armed" : ""}" data-act="x-cat" data-v="${ci}" role="button" tabindex="0"><b>${esc(catName(cn))}</b><div class="pool">${here
+              .map((p) => {
+                if (!X.checked) return chip(p);
+                const ok = s.cats[cn].includes(p);
+                const right = Object.keys(s.cats).find((k) =>
+                  s.cats[k].includes(p),
+                );
+                return `<button class="pc ${ok ? "good" : "bad"}" disabled>${esc(p)}${ok ? "" : `<small>→ ${esc(catName(right))}</small>`}</button>`;
+              })
+              .join("")}</div></div>`;
+          })
+          .join("");
+        let score = 0;
+        if (X.checked)
+          X.items.forEach((p) => {
+            if (s.cats[X.place[p]] && s.cats[X.place[p]].includes(p)) score++;
+          });
+        return `<div class="panel"><h3>${esc(sortTitle(s.title))}</h3><p class="muted">${esc(t("sortHelp"))}</p>
+   <div class="pool">${left.map((p) => chip(p, X.pick === p ? "sel" : "")).join("") || `<span class="muted">${esc(t("sortAll"))}</span>`}</div>
+   <div class="groups">${gs}</div>
+   ${X.checked ? `<div class="fb ${score === X.items.length ? "ok" : "no"}">${esc(t("sortScore", score, X.items.length))}</div>` : ""}
+   <div class="row">${X.checked ? `<button class="btn wide ghost" data-act="x-reset">${esc(t("tryAgain"))}</button>${X.s < X.sets.length - 1 ? `<button class="btn wide" data-act="x-nextset">${esc(t("nextSet"))}</button>` : ""}` : `<button class="btn wide ghost" data-act="x-reset">${esc(t("reset"))}</button><button class="btn wide" data-act="x-check" ${placed === X.items.length ? "" : "disabled"}>${esc(t("check"))}</button>`}</div></div>`;
+      }
+      function xInput() {
+        const el = $("#xin");
+        return el ? el.value : "";
+      }
+      function xAct(a, el) {
+        switch (a) {
+          case "x-back":
+            X = null;
+            break;
+          case "x-again":
+            startEx(X.type);
+            return;
+          case "x-add":
+            addReview(X.wrong);
+            X.added = true;
+            break;
+          case "x-m": {
+            const side = el.dataset.side,
+              k = el.dataset.k;
+            if (!X.pend || X.pend.side === side) {
+              X.pend = { side, k };
+              break;
+            }
+            const l = side === "l" ? k : X.pend.k,
+              r = side === "r" ? k : X.pend.k;
+            X.pend = null;
+            if (l === r) X.done.push(l);
+            else {
+              X.wrong.push(l);
+              X.flash = { l, r };
+              setTimeout(() => {
+                if (X) {
+                  X.flash = null;
+                  render();
+                }
+              }, 600);
+            }
+            break;
+          }
+          case "x-hint":
+            X.val = xInput();
+            X.hint = true;
+            break;
+          case "x-check": {
+            if (X.type === "fork") {
+              const f = X.q[X.i],
+                q = f.f,
+                sel = X.sel.map((i) => f.opts[i]);
+              X.fok =
+                sel.length === q.ok.length &&
+                sel.every((o) => q.ok.includes(o));
+              if (X.fok) X.sc++;
+              X.checked = true;
+              break;
+            }
+            if (X.type === "sort") {
+              X.checked = true;
+              break;
+            }
+            const c = X.q[X.i],
+              v = norm(xInput());
+            X.val = xInput();
+            let good;
+            if (X.type === "gap")
+              good = [c.ans, ...(c.alt || [])].map(norm).includes(v);
+            else
+              good =
+                variants(c.en).includes(v) ||
+                (c.say && norm(c.say) === v) ||
+                (c.acc || []).map(norm).includes(v);
+            if (!v) return;
+            X.fb = good ? "ok" : "no";
+            if (good) X.sc++;
+            else X.wrong.push(c.en);
+            break;
+          }
+          case "x-next":
+            X.i++;
+            X.fb = null;
+            X.val = "";
+            X.hint = false;
+            X.pick = null;
+            X.sel = [];
+            X.checked = false;
+            break;
+          case "x-opt": {
+            const q = X.q[X.i];
+            X.pick = +el.dataset.v;
+            if (q.opts[X.pick] === q.right) X.sc++;
+            else X.wrong.push(q.c.en);
+            break;
+          }
+          case "x-tog": {
+            const i = +el.dataset.v,
+              k = X.sel.indexOf(i);
+            if (k >= 0) X.sel.splice(k, 1);
+            else X.sel.push(i);
+            break;
+          }
+          case "x-say": {
+            const c = X.q[X.i];
+            speak(sayText(c), el.dataset.slow === "1");
+            return;
+          }
+          case "x-pc": {
+            const p = el.dataset.v;
+            if (p in X.place) delete X.place[p];
+            else X.pick = X.pick === p ? null : p;
+            break;
+          }
+          case "x-cat": {
+            if (X.checked || !X.pick) break;
+            X.place[X.pick] = X.cats[+el.dataset.v];
+            X.pick = null;
+            break;
+          }
+          case "x-reset":
+            initSort();
+            break;
+          case "x-nextset":
+            X.s++;
+            initSort();
+            break;
+        }
+        render();
+        const i = $("#xin");
+        if (i && !i.disabled && (a === "x-next" || a === "x-hint")) i.focus();
+      }
+
+      /* ============ settings ============ */
+      function renderSet() {
+        const cur = pickVoice(),
+          L = S.set.lang,
+          M = S.set.mean;
+        const opts = VOICES.map(
+          (v) =>
+            `<option value="${esc(v.voiceURI)}" ${cur && cur.voiceURI === v.voiceURI ? "selected" : ""}>${GOOD.test(v.name) ? "★ " : ""}${esc(v.name)} (${esc(v.lang)})</option>`,
+        ).join("");
+        return `<div class="panel"><h2>${esc(t("voice"))}</h2>
+    ${VOICES.length ? `<label for="voiceSel" class="muted">${esc(t("voiceLbl"))}</label><select id="voiceSel">${opts}</select><div class="row"><button class="btn ghost" data-act="listen">${ICON}${esc(t("listen"))}</button></div>` : `<p class="muted">${esc(t("noVoice"))}</p>`}
+    <p class="muted">${t("iphone")}</p></div>
+   <div class="panel"><h2>${esc(t("progressH"))}</h2>
+    <p class="muted">${esc(t("saveHint"))}</p>
+    <div class="row"><button class="btn" data-act="copycode">${esc(t("copyCode"))}</button></div>
+    <textarea id="codeBox" readonly aria-label="${esc(t("progressH"))}" placeholder="${esc(t("codePh"))}"></textarea>
+    <label for="restoreBox" class="muted">${esc(t("restoreLbl"))}</label>
+    <textarea id="restoreBox" placeholder="${esc(t("restorePh"))}"></textarea>
+    <div class="row"><button class="btn ghost" data-act="restore">${esc(t("restoreBtn"))}</button><button class="btn warn" data-act="reset" id="resetBtn">${esc(resetArmed ? t("resetConfirm") : t("resetBtn"))}</button></div>
+    <p class="msg" id="msg" role="status"></p></div>`;
+      }
+      function setMsg(txt, bad) {
+        const m = $("#msg");
+        if (m) {
+          m.textContent = txt;
+          m.style.color = bad ? "var(--bad)" : "var(--ok)";
+        }
+      }
+      function makeCode() {
+        return btoa(
+          unescape(
+            encodeURIComponent(
+              JSON.stringify({
+                v: 1,
+                prog: S.prog,
+                batches: S.batches,
+                sel: S.set.sel,
+              }),
+            ),
+          ),
+        );
+      }
+      function applyCode(c) {
+        const o = JSON.parse(
+          decodeURIComponent(escape(atob(c.replace(/\s+/g, "")))),
+        );
+        if (!o || o.v !== 1 || typeof o.prog !== "object")
+          throw new Error("bad");
+        S.prog = o.prog;
+        S.batches = o.batches || {};
+        if (Array.isArray(o.sel))
+          S.set.sel = o.sel.filter((l) => LESSONS.includes(l));
+        save();
+      }
+      function copyCode() {
+        let code = "";
+        try {
+          code = makeCode();
+        } catch (e) {
+          setMsg(t("msgNoCode"), true);
+          return;
+        }
+        const box = $("#codeBox");
+        box.value = code;
+        box.focus();
+        box.select();
+        let p;
+        try {
+          p = navigator.clipboard.writeText(code);
+        } catch (e) {
+          p = null;
+        }
+        if (p && p.then)
+          p.then(
+            () => setMsg(t("msgCopied")),
+            () => setMsg(t("msgSelect"), false),
+          );
+        else setMsg(t("msgSelect"), false);
+      }
+
+      /* ============ render + events ============ */
+      function chrome() {
+        $("#t-cards").textContent = t("tabCards");
+        $("#t-ex").textContent = t("tabEx");
+        $("#t-set").textContent = t("tabSet");
+        $("#sub").textContent = t("sub");
+        try {
+          document.documentElement.lang = S.set.lang;
+        } catch (e) {}
+      }
+      function render() {
+        ["cards", "ex", "set"].forEach((k) => {
+          const b = $("#t-" + k);
+          b.setAttribute("aria-selected", UI.tab === k);
+        });
+        chrome();
+        const m = $("#main");
+        m.innerHTML =
+          `<div class="wrap" style="gap:14px">` +
+          (UI.tab === "cards"
+            ? renderCards()
+            : UI.tab === "ex"
+              ? renderEx()
+              : renderSet()) +
+          `</div>`;
+      }
+      document.addEventListener("click", (e) => {
+        const tg = e.target;
+        if (tg.closest && tg.closest("a")) return;
+        const el = tg.closest && tg.closest("[data-act]");
+        if (!el) return;
+        const a = el.dataset.act,
+          v = el.dataset.v;
+        if (a.startsWith("x-")) {
+          xAct(a, el);
+          return;
+        }
+        switch (a) {
+          case "tab":
+            UI.tab = v;
+            resetArmed = false;
+            render();
+            window.scrollTo(0, 0);
+            return;
+          case "lall":
+            S.set.sel = [];
+            flipped = false;
+            gapOpen = false;
+            X = null;
+            save();
+            break;
+          case "lesson":
+            toggleLesson(v);
+            return;
+          case "mode":
+            S.set.mode = v;
+            flipped = false;
+            gapOpen = false;
+            save();
+            break;
+          case "shuf":
+            S.set.shuffle = !S.set.shuffle;
+            flipped = false;
+            gapOpen = false;
+            save();
+            break;
+          case "rev":
+            S.set.reverse = !S.set.reverse;
+            save();
+            break;
+          case "restart":
+            restart();
+            return;
+          case "flip":
+            flipped = !flipped;
+            gapOpen = false;
+            break;
+          case "gap":
+            gapOpen = !gapOpen;
+            break;
+          case "known":
+            rate(true);
+            return;
+          case "again":
+            rate(false);
+            return;
+          case "say": {
+            const c = CARDS[+v];
+            speak(sayText(c));
+            return;
+          }
+          case "another":
+            anotherBatch();
+            return;
+          case "retry":
+            retryWords();
+            return;
+          case "toex":
+            UI.tab = "ex";
+            X = null;
+            break;
+          case "exsrc":
+            S.set.exSrc = v;
+            save();
+            break;
+          case "xstart":
+            startEx(v);
+            return;
+          case "listen":
+            speak(t("sample"));
+            return;
+          case "copycode":
+            copyCode();
+            return;
+          case "restore": {
+            const r = $("#restoreBox").value.trim();
+            if (!r) {
+              setMsg(t("msgPaste"), true);
+              return;
+            }
+            try {
+              applyCode(r);
+              flipped = false;
+              X = null;
+              setMsg(t("msgRestored"));
+            } catch (err) {
+              setMsg(t("msgBad"), true);
+            }
+            return;
+          }
+          case "reset":
+            if (!resetArmed) {
+              resetArmed = true;
+              clearTimeout(resetTimer);
+              resetTimer = setTimeout(() => {
+                resetArmed = false;
+                const b = $("#resetBtn");
+                if (b) b.textContent = t("resetBtn");
+              }, 4000);
+              render();
+              return;
+            }
+            resetArmed = false;
+            S.prog = {};
+            S.batches = {};
+            flipped = false;
+            gapOpen = false;
+            X = null;
+            save();
+            render();
+            setMsg(t("msgReset"));
+            return;
+        }
+        render();
+      });
+      document.addEventListener("change", (e) => {
+        if (e.target.id === "voiceSel") {
+          S.set.voice = e.target.value;
+          save();
+        }
+      });
+      document.addEventListener("keydown", (e) => {
+        const tg = e.target,
+          tag = tg && tg.tagName;
+        if (e.key === "Enter" && tg && tg.id === "xin") {
+          e.preventDefault();
+          const b = document.querySelector("[data-primary]");
+          if (b) b.click();
+          return;
+        }
+        if (UI.tab !== "cards" || /INPUT|TEXTAREA|SELECT/.test(tag)) return;
+        const b = getBatch(),
+          a = activeOf(b);
+        if (!a.ids.length || a.pos >= a.ids.length) return;
+        if (e.key === " ") {
+          if (tag === "BUTTON" || tag === "A") return;
+          e.preventDefault();
+          flipped = !flipped;
+          gapOpen = false;
+          render();
+        } else if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          rate(false);
+        } else if (e.key === "ArrowRight") {
+          e.preventDefault();
+          rate(true);
+        }
+      });
+      load();
+      render();
+    </script>
+  </body>
+</html>
